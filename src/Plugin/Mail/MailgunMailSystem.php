@@ -108,4 +108,5 @@ class MailgunMailSystem implements MailInterface, ContainerFactoryPluginInterfac
     $mailgun = Mailgun::create($apiKey);
     return $mailgun->messages()->send($domain, $params);
   }
+
 }
