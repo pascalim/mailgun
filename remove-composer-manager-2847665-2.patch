@@ -1,0 +1,10 @@
+diff --git a/mailgun.info.yml b/mailgun.info.yml
+index 772eb35..5e81a77 100644
+--- a/mailgun.info.yml
++++ b/mailgun.info.yml
+@@ -4,5 +4,4 @@ description: Allows site to send emails using Mailgun.com
+ core: 8.x
+ package: mail
+ dependencies:
+-  - composer_manager
+   - mailsystem
