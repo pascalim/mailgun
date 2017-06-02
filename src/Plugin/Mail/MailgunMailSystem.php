@@ -10,7 +10,7 @@ use Mailgun\Mailgun;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Modify the Drupal mail system to use Mandrill when sending emails.
+ * Modify the Drupal mail system to use Mailgun when sending emails.
  *
  * @Mail(
  *   id = "MailgunMailSystem",
