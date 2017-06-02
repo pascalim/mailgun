@@ -5,6 +5,8 @@
  * mailgun.install
  */
 
+use Doctrine\Common\ClassLoader;
+
 /**
  * Implements hook_install().
  */
@@ -53,10 +55,8 @@ function mailgun_requirements($phase) {
   }
 
   if ($phase == 'runtime') {
-    $config = \Drupal::config('mailgun.settings');
-
     // Check for Mailgun library.
-    if (\Doctrine\Common\ClassLoader::classExists($config->get('api_classname'))) {
+    if (ClassLoader::classExists('\Mailgun\Mailgun')) {
       $requirements['mailgun']['description'] = t('The Mailgun library is installed correctly.');
       $requirements['mailgun']['severity'] = REQUIREMENT_OK;
     }
