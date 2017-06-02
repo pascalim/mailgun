@@ -1,5 +1,5 @@
 {
-  "name": "drupal/mailgun",
+  "name": "dots/mailgun",
   "type": "drupal-module",
   "require": {
     "mailgun/mailgun-php": "1.7.2"
