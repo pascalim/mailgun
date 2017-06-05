@@ -39,17 +39,16 @@ class MailgunSettingsForm extends ConfigFormBase {
     $url = Url::fromUri('https://mailgun.com/app/domains');
     $link = \Drupal::l(t('mailgun.com/app/domains'), $url);
 
-    $form['description'] =
-      [
-        '#markup' => "Please refer to $link for your settings."
-      ];
+    $form['description'] = [
+      '#markup' => "Please refer to $link for your settings."
+    ];
 
     $form['api_key'] = [
       '#title' => t('Mailgun API Key'),
       '#type' => 'textfield',
       '#description' => t('Enter your API key.'),
       '#default_value' => $config->get('api_key'),
-    ]
+    ];
 
     $form['api_endpoint'] = [
       '#title' => t('Mailgun API Endpoint'),
@@ -63,7 +62,7 @@ class MailgunSettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#description' => t('Enter your API working domain.'),
       '#default_value' => $config->get('working_domain'),
-    ]
+    ];
 
     $form['debug_mode'] = [
       '#title' => t('Enable Debug Mode'),
