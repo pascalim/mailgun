@@ -101,7 +101,7 @@ class MailgunMailSystem implements MailInterface, ContainerFactoryPluginInterfac
       }
     }
 
-    $config = $this->configFactory->get('mailgun.adminsettings');
+    $config = $this->configFactory->get('mailgun.settings');
     $domain = $config->get('working_domain');
     $apiKey = $config->get('api_key');
 
